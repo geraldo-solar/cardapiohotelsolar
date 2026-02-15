@@ -23,16 +23,30 @@
             <!-- Logo Image -->
             <img src="hotel-solar-logo.png" alt="Hotel Solar" class="brand-logo">
 
+
+
             <div class="menu-identifier">
                 <h1 class="menu-title">Cardápio Digital</h1>
                 <div class="title-separator"></div>
             </div>
 
             <div class="sponsors-container">
-                <span class="sponsors-label">Oferecimento</span>
+                <span class="sponsors-label" data-i18n="sponsors_label">Oferecimento</span>
                 <div class="sponsors">
                     <img src="sponsor-1.png" alt="Coca Cola" class="sponsor-logo coke">
                     <img src="sponsor-2-final-v3.png" alt="Cerpa Export" class="sponsor-logo cerpa">
+                </div>
+            </div>
+
+            <!-- Language Selector -->
+            <div class="language-selector-container">
+                <p class="lang-label" data-i18n="select_language">Selecione o idioma</p>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="pt" aria-label="Português">🇧🇷</button>
+                    <button class="lang-btn" data-lang="en" aria-label="English">🇺🇸</button>
+                    <button class="lang-btn" data-lang="fr" aria-label="Français">🇫🇷</button>
+                    <button class="lang-btn" data-lang="it" aria-label="Italiano">🇮🇹</button>
+                    <button class="lang-btn" data-lang="es" aria-label="Español">🇪🇸</button>
                 </div>
             </div>
         </div>
@@ -40,19 +54,19 @@
 
     <nav class="sticky-nav" id="navbar">
         <ul>
-            <li><a href="#entradas" class="active">Entradas</a></li>
-            <li><a href="#drinks">Drinks</a></li>
-            <li><a href="#saladas">Saladas</a></li>
-            <li><a href="#mariscos">Peixe & Camarão</a></li>
-            <li><a href="#peixes">Risoto & Massa</a></li>
+            <li><a href="#entradas" class="active" data-i18n="nav_entradas">Entradas</a></li>
+            <li><a href="#drinks" data-i18n="nav_drinks">Drinks</a></li>
+            <li><a href="#saladas" data-i18n="nav_saladas">Saladas</a></li>
+            <li><a href="#mariscos" data-i18n="nav_mariscos">Peixe & Camarão</a></li>
+            <li><a href="#peixes" data-i18n="nav_peixes">Risoto & Massa</a></li>
 
-            <li><a href="#carnes">Carnes</a></li>
-            <li><a href="#kids">Kids</a></li>
-            <li><a href="#caldos">Caldos e Sopas</a></li>
-            <li><a href="#burgers">Burgers</a></li>
-            <li><a href="#porcoes">Porções</a></li>
-            <li><a href="#sobremesas">Sobremesas</a></li>
-            <li><a href="#bebidas">Bebidas</a></li>
+            <li><a href="#carnes" data-i18n="nav_carnes">Carnes</a></li>
+            <li><a href="#kids" data-i18n="nav_kids">Kids</a></li>
+            <li><a href="#caldos" data-i18n="nav_caldos">Caldos e Sopas</a></li>
+            <li><a href="#burgers" data-i18n="nav_burgers">Burgers</a></li>
+            <li><a href="#porcoes" data-i18n="nav_porcoes">Porções</a></li>
+            <li><a href="#sobremesas" data-i18n="nav_sobremesas">Sobremesas</a></li>
+            <li><a href="#bebidas" data-i18n="nav_bebidas">Bebidas</a></li>
         </ul>
     </nav>
 
@@ -60,91 +74,99 @@
 
         <!-- Entradas -->
         <!-- Entradas -->
+        <!-- Entradas -->
         <section id="entradas" class="menu-section">
-            <h2 class="section-title">Entradas</h2>
+            <h2 class="section-title" data-i18n="section_entradas_title">Entradas</h2>
             <div class="menu-items">
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Batata Frita</h3>
-                        <p class="description">Molho rosé.</p>
+                        <h3 data-i18n="item_batata_frita_title">Batata Frita</h3>
+                        <p class="description" data-i18n="item_batata_frita_desc">Molho rosé.</p>
                     </div>
                     <span class="price">R$ 44,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Macaxeira frita com bacon</h3>
-                        <p class="description">Molho rosé.</p>
+                        <h3 data-i18n="item_macaxeira_bacon_title">Macaxeira frita com bacon</h3>
+                        <p class="description" data-i18n="item_macaxeira_bacon_desc">Molho rosé.</p>
                     </div>
                     <span class="price">R$ 50,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Filé Aperitivo</h3>
-                        <p class="description">Grelhado ao molho de cebola e farofa de banana.</p>
+                        <h3 data-i18n="item_file_aperitivo_title">Filé Aperitivo</h3>
+                        <p class="description" data-i18n="item_file_aperitivo_desc">Grelhado ao molho de cebola e farofa
+                            de banana.</p>
                     </div>
                     <span class="price">R$ 90,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Camarão ao alho e óleo</h3>
-                        <p class="description">Farofa.</p>
+                        <h3 data-i18n="item_camarao_alho_oleo_title">Camarão ao alho e óleo</h3>
+                        <p class="description" data-i18n="item_camarao_alho_oleo_desc">Farofa.</p>
                     </div>
                     <span class="price">R$ 95,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Caranguejo Refogado</h3>
-                        <p class="description">Farofa.</p>
+                        <h3 data-i18n="item_caranguejo_refogado_title">Caranguejo Refogado</h3>
+                        <p class="description" data-i18n="item_caranguejo_refogado_desc">Farofa.</p>
                     </div>
                     <span class="price">R$ 72,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Camarão Crocante</h3>
-                        <p class="description">Camarão empanado na farinha especial e molho rosé.</p>
+                        <h3 data-i18n="item_camarao_crocante_title">Camarão Crocante</h3>
+                        <p class="description" data-i18n="item_camarao_crocante_desc">Camarão empanado na farinha
+                            especial e molho rosé.</p>
                     </div>
                     <span class="price">R$ 98,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Panceta de Porco</h3>
-                        <p class="description">Corte suíno especial assado, pêra portuguesa gratinada e mostarda com
+                        <h3 data-i18n="item_panceta_porco_title">Panceta de Porco</h3>
+                        <p class="description" data-i18n="item_panceta_porco_desc">Corte suíno especial assado, pêra
+                            portuguesa gratinada e mostarda com
                             mel.</p>
                     </div>
                     <span class="price">R$ 74,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Ostra com Fonduta de Queijo</h3>
-                        <p class="description">Gratinada ao creme de parmesão, torradas - 6 und.</p>
+                        <h3 data-i18n="item_ostra_fonduta_title">Ostra com Fonduta de Queijo</h3>
+                        <p class="description" data-i18n="item_ostra_fonduta_desc">Gratinada ao creme de parmesão,
+                            torradas - 6 und.</p>
                     </div>
                     <span class="price">R$ 90,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Carpaccio ao Pesto</h3>
-                        <p class="description">Lâminas finas de carne, molho pesto, parmesão e torradas.</p>
+                        <h3 data-i18n="item_carpaccio_pesto_title">Carpaccio ao Pesto</h3>
+                        <p class="description" data-i18n="item_carpaccio_pesto_desc">Lâminas finas de carne, molho
+                            pesto, parmesão e torradas.</p>
                     </div>
                     <span class="price">R$ 62,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Isca de Peixe Crocante</h3>
-                        <p class="description">Farofa e molho rosé.</p>
+                        <h3 data-i18n="item_isca_peixe_title">Isca de Peixe Crocante</h3>
+                        <p class="description" data-i18n="item_isca_peixe_desc">Farofa e molho rosé.</p>
                     </div>
                     <span class="price">R$ 84,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Linguiça Artesanal com recheio de Jambú</h3>
-                        <p class="description">Grelhada, acompanha molho de pimenta com tucupi, farofa e vinagrete.</p>
+                        <h3 data-i18n="item_linguica_jambu_title">Linguiça Artesanal com recheio de Jambú</h3>
+                        <p class="description" data-i18n="item_linguica_jambu_desc">Grelhada, acompanha molho de pimenta
+                            com tucupi, farofa e vinagrete.</p>
                     </div>
                     <span class="price">R$ 68,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Tábua de Frios</h3>
-                        <p class="description">Queijos, salame, azeitona, uva, creme de queijo e torradas.</p>
+                        <h3 data-i18n="item_tabua_frios_title">Tábua de Frios</h3>
+                        <p class="description" data-i18n="item_tabua_frios_desc">Queijos, salame, azeitona, uva, creme
+                            de queijo e torradas.</p>
                     </div>
                     <span class="price">R$ 80,00</span>
                 </div>
@@ -152,11 +174,13 @@
         </section>
 
         <!-- Drinks -->
+        <!-- Drinks -->
         <section id="drinks" class="menu-section">
-            <h2 class="section-title">Drinks</h2>
+            <h2 class="section-title" data-i18n="section_drinks_title">Drinks</h2>
 
             <!-- Autorais -->
-            <h3 style="text-align:center; margin: 20px 0; font-family: var(--font-heading); font-size: 1.4rem;">Autorais
+            <h3 style="text-align:center; margin: 20px 0; font-family: var(--font-heading); font-size: 1.4rem;">
+                <span data-i18n="section_drinks_subtitle_autorais">Autorais</span>
                 <br><span
                     style="font-size: 0.9rem; font-family: var(--font-body); font-weight: 300; text-transform: none;">(Signature
                     Cocktails)</span>
@@ -164,56 +188,63 @@
             <div class="menu-items">
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3 style="color: #e31837;">Bougainville <span style="font-size: 0.8rem;">(Novo)</span></h3>
+                        <h3 style="color: #e31837;"><span data-i18n="item_bougainville_title">Bougainville</span> <span
+                                style="font-size: 0.8rem;" data-i18n="tag_new">(Novo)</span></h3>
                     </div>
                     <span class="price">R$ 37,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>O Barquinho</h3>
-                        <p class="description">Rum, Aperol, abacaxi, xarope de açúcar e limão.</p>
+                        <h3 data-i18n="item_o_barquinho_title">O Barquinho</h3>
+                        <p class="description" data-i18n="item_o_barquinho_desc">Rum, Aperol, abacaxi, xarope de açúcar
+                            e limão.</p>
                     </div>
                     <span class="price">R$ 38,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Maçarico</h3>
-                        <p class="description">Gin de jambu, limão siciliano, xarope de açúcar e angustura.</p>
+                        <h3 data-i18n="item_macarico_title">Maçarico</h3>
+                        <p class="description" data-i18n="item_macarico_desc">Gin de jambu, limão siciliano, xarope de
+                            açúcar e angustura.</p>
                     </div>
                     <span class="price">R$ 37,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Espadarte</h3>
-                        <p class="description">Gin, licor 43, manjericão, limão taiti e açúcar.</p>
+                        <h3 data-i18n="item_espadarte_title">Espadarte</h3>
+                        <p class="description" data-i18n="item_espadarte_desc">Gin, licor 43, manjericão, limão taiti e
+                            açúcar.</p>
                     </div>
                     <span class="price">R$ 37,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Porto Grande</h3>
-                        <p class="description">Tequila, cointreau, xarope chicória e limão taiti.</p>
+                        <h3 data-i18n="item_porto_grande_title">Porto Grande</h3>
+                        <p class="description" data-i18n="item_porto_grande_desc">Tequila, cointreau, xarope chicória e
+                            limão taiti.</p>
                     </div>
                     <span class="price">R$ 37,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Pirabas</h3>
-                        <p class="description">Gin, suco de limão siciliano e mel.</p>
+                        <h3 data-i18n="item_pirabas_title">Pirabas</h3>
+                        <p class="description" data-i18n="item_pirabas_desc">Gin, suco de limão siciliano e mel.</p>
                     </div>
                     <span class="price">R$ 37,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Olho Grego</h3>
-                        <p class="description">Gin, curaçau blue, limão siciliano e espuma gengibre.</p>
+                        <h3 data-i18n="item_olho_grego_title">Olho Grego</h3>
+                        <p class="description" data-i18n="item_olho_grego_desc">Gin, curaçau blue, limão siciliano e
+                            espuma gengibre.</p>
                     </div>
                     <span class="price">R$ 37,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>La Passion</h3>
-                        <p class="description">Vodka, morango, pitaya vermelha, açúcar e gelo.</p>
+                        <h3 data-i18n="item_la_passion_title">La Passion</h3>
+                        <p class="description" data-i18n="item_la_passion_desc">Vodka, morango, pitaya vermelha, açúcar
+                            e gelo.</p>
                     </div>
                     <span class="price">R$ 37,00</span>
                 </div>
@@ -221,43 +252,46 @@
 
             <!-- Atuais -->
             <h3 style="text-align:center; margin: 30px 0 20px 0; font-family: var(--font-heading); font-size: 1.4rem;">
-                Atuais <br><span
+                <span data-i18n="section_drinks_subtitle_atuais">Atuais</span> <br><span
                     style="font-size: 0.9rem; font-family: var(--font-body); font-weight: 300; text-transform: none;">(Modern
                     Classics)</span>
             </h3>
             <div class="menu-items">
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Moscow Mule</h3>
-                        <p class="description">Vodka, limão siciliano, xarope de gengibre e espuma de gengibre.</p>
+                        <h3 data-i18n="item_moscow_mule_title">Moscow Mule</h3>
+                        <p class="description" data-i18n="item_moscow_mule_desc">Vodka, limão siciliano, xarope de
+                            gengibre e espuma de gengibre.</p>
                     </div>
                     <span class="price">R$ 35,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Gin Mule</h3>
-                        <p class="description">Gin, limão siciliano, xarope de gengibre e espuma de gengibre.</p>
+                        <h3 data-i18n="item_gin_mule_title">Gin Mule</h3>
+                        <p class="description" data-i18n="item_gin_mule_desc">Gin, limão siciliano, xarope de gengibre e
+                            espuma de gengibre.</p>
                     </div>
                     <span class="price">R$ 35,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Gin Tônica</h3>
-                        <p class="description">Gin, água tônica e harmonização com especiarias.</p>
+                        <h3 data-i18n="item_gin_tonica_title">Gin Tônica</h3>
+                        <p class="description" data-i18n="item_gin_tonica_desc">Gin, água tônica e harmonização com
+                            especiarias.</p>
                     </div>
                     <span class="price">R$ 36,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Spritz Aperol</h3>
-                        <p class="description">Espumante, aperol e soda.</p>
+                        <h3 data-i18n="item_spritz_aperol_title">Spritz Aperol</h3>
+                        <p class="description" data-i18n="item_spritz_aperol_desc">Espumante, aperol e soda.</p>
                     </div>
                     <span class="price">R$ 35,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Mimosa</h3>
-                        <p class="description">Espumante e suco de laranja.</p>
+                        <h3 data-i18n="item_mimosa_title">Mimosa</h3>
+                        <p class="description" data-i18n="item_mimosa_desc">Espumante e suco de laranja.</p>
                     </div>
                     <span class="price">R$ 28,00</span>
                 </div>
@@ -265,79 +299,84 @@
 
             <!-- Antológicos -->
             <h3 style="text-align:center; margin: 30px 0 20px 0; font-family: var(--font-heading); font-size: 1.4rem;">
-                Antológicos <br><span
+                <span data-i18n="section_drinks_subtitle_antologicos">Antológicos</span> <br><span
                     style="font-size: 0.9rem; font-family: var(--font-body); font-weight: 300; text-transform: none;">(Heritage
                     Cocktails)</span>
             </h3>
             <div class="menu-items">
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Negroni</h3>
-                        <p class="description">Gin, vermute, campari e twist de laranja.</p>
+                        <h3 data-i18n="item_negroni_title">Negroni</h3>
+                        <p class="description" data-i18n="item_negroni_desc">Gin, vermute, campari e twist de laranja.
+                        </p>
                     </div>
                     <span class="price">R$ 35,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Mojito</h3>
-                        <p class="description">Rum, limão e hortelã.</p>
+                        <h3 data-i18n="item_mojito_title">Mojito</h3>
+                        <p class="description" data-i18n="item_mojito_desc">Rum, limão e hortelã.</p>
                     </div>
                     <span class="price">R$ 30,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Marguerita</h3>
-                        <p class="description">Tequila, cointreau, curaçau blue e limão taiti.</p>
+                        <h3 data-i18n="item_marguerita_title">Marguerita</h3>
+                        <p class="description" data-i18n="item_marguerita_desc">Tequila, cointreau, curaçau blue e limão
+                            taiti.</p>
                     </div>
                     <span class="price">R$ 35,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Long Island Icedtea</h3>
-                        <p class="description">Tequila, vodka, rum, gin, cointreau, suco de limão, xarope de açúcar e
+                        <h3 data-i18n="item_long_island_title">Long Island Icedtea</h3>
+                        <p class="description" data-i18n="item_long_island_desc">Tequila, vodka, rum, gin, cointreau,
+                            suco de limão, xarope de açúcar e
                             refrigerante de cola.</p>
                     </div>
                     <span class="price">R$ 35,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Garibaldi</h3>
-                        <p class="description">Campari, suco de laranja e gelo.</p>
+                        <h3 data-i18n="item_garibaldi_title">Garibaldi</h3>
+                        <p class="description" data-i18n="item_garibaldi_desc">Campari, suco de laranja e gelo.</p>
                     </div>
                     <span class="price">R$ 35,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Fitzgerald</h3>
-                        <p class="description">Gin, xarope de açúcar e bitter.</p>
+                        <h3 data-i18n="item_fitzgerald_title">Fitzgerald</h3>
+                        <p class="description" data-i18n="item_fitzgerald_desc">Gin, xarope de açúcar e bitter.</p>
                     </div>
                     <span class="price">R$ 35,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Maracujack</h3>
-                        <p class="description">Jack Daniel's, maracujá e açúcar.</p>
+                        <h3 data-i18n="item_maracujack_title">Maracujack</h3>
+                        <p class="description" data-i18n="item_maracujack_desc">Jack Daniel's, maracujá e açúcar.</p>
                     </div>
                     <span class="price">R$ 37,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Caipirosca</h3>
-                        <p class="description">Vodka importada, frutas da estação, açúcar e gelo.</p>
+                        <h3 data-i18n="item_caipirosca_title">Caipirosca</h3>
+                        <p class="description" data-i18n="item_caipirosca_desc">Vodka importada, frutas da estação,
+                            açúcar e gelo.</p>
                     </div>
                     <span class="price">R$ 35,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Caipirinha</h3>
-                        <p class="description">Cachaça, limão taiti, açúcar e gelo.</p>
+                        <h3 data-i18n="item_caipirinha_title">Caipirinha</h3>
+                        <p class="description" data-i18n="item_caipirinha_desc">Cachaça, limão taiti, açúcar e gelo.</p>
                     </div>
                     <span class="price">R$ 28,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Coquetel de Frutas</h3>
-                        <p class="description">Mix de frutas, vodka, leite condensado, creme de leite e groselha e
+                        <h3 data-i18n="item_coquetel_frutas_title">Coquetel de Frutas</h3>
+                        <p class="description" data-i18n="item_coquetel_frutas_desc">Mix de frutas, vodka, leite
+                            condensado, creme de leite e groselha e
                             chantilly.</p>
                     </div>
                     <span class="price">R$ 35,00</span>
@@ -346,14 +385,15 @@
 
             <!-- Sem Álcool -->
             <h3 style="text-align:center; margin: 30px 0 20px 0; font-family: var(--font-heading); font-size: 1.4rem;">
-                Sem Álcool <br><span
+                <span data-i18n="section_drinks_subtitle_sem_alcool">Sem Álcool</span> <br><span
                     style="font-size: 0.9rem; font-family: var(--font-body); font-weight: 300; text-transform: none;">(Non-Alcoholic)</span>
             </h3>
             <div class="menu-items">
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Coquetel de Frutas</h3>
-                        <p class="description">Mix de frutas, leite condensado, creme de leite, groselha e chantilly.
+                        <h3 data-i18n="item_coquetel_frutas_sem_alcool_title">Coquetel de Frutas</h3>
+                        <p class="description" data-i18n="item_coquetel_frutas_sem_alcool_desc">Mix de frutas, leite
+                            condensado, creme de leite, groselha e chantilly.
                         </p>
                     </div>
                     <span class="price">R$ 30,00</span>
@@ -362,21 +402,24 @@
         </section>
 
         <!-- Saladas -->
+        <!-- Saladas -->
         <section id="saladas" class="menu-section">
-            <h2 class="section-title">Saladas</h2>
+            <h2 class="section-title" data-i18n="section_saladas_title">Saladas</h2>
             <div class="menu-items">
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Salada Caesar</h3>
-                        <p class="description">Mix de folhas, tiras de frango grelhado, croutons e parmesão ao molho
+                        <h3 data-i18n="item_salada_caesar_title">Salada Caesar</h3>
+                        <p class="description" data-i18n="item_salada_caesar_desc">Mix de folhas, tiras de frango
+                            grelhado, croutons e parmesão ao molho
                             caesar.</p>
                     </div>
                     <span class="price">R$ 70,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Salada com Feijão manteiguinha</h3>
-                        <p class="description">Mix de Folhas, vinagrete de feijão manteiguinha, tomate, cenoura,
+                        <h3 data-i18n="item_salada_feijao_manteiguinha_title">Salada com Feijão manteiguinha</h3>
+                        <p class="description" data-i18n="item_salada_feijao_manteiguinha_desc">Mix de Folhas, vinagrete
+                            de feijão manteiguinha, tomate, cenoura,
                             abobrinha e queijo.</p>
                     </div>
                     <span class="price">R$ 62,00</span>
@@ -386,47 +429,52 @@
 
         <!-- Mariscos (Renamed from Saladas) -->
         <section id="mariscos" class="menu-section">
-            <h2 class="section-title">Peixe & Camarão</h2>
+            <h2 class="section-title" data-i18n="section_mariscos_title">Peixe & Camarão</h2>
             <div class="menu-items">
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Pescada Grelhada a la creme de tucupi</h3>
-                        <p class="description">Arroz com tucupi e jambú e Pirão com camarão</p>
+                        <h3 data-i18n="item_pescada_tucupi_title">Pescada Grelhada a la creme de tucupi</h3>
+                        <p class="description" data-i18n="item_pescada_tucupi_desc">Arroz com tucupi e jambú e Pirão com
+                            camarão</p>
                     </div>
                     <span class="price">R$ 176,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Pescada Grelhada ao molho de Camarão</h3>
-                        <p class="description">Arroz branco e purê de batata</p>
+                        <h3 data-i18n="item_pescada_camarao_title">Pescada Grelhada ao molho de Camarão</h3>
+                        <p class="description" data-i18n="item_pescada_camarao_desc">Arroz branco e purê de batata</p>
                     </div>
                     <span class="price">R$ 176,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Camarão Crocante Solar</h3>
-                        <p class="description">Empanado e gratinado com queijo, arroz à piamontese e fritos</p>
+                        <h3 data-i18n="item_camarao_solar_title">Camarão Crocante Solar</h3>
+                        <p class="description" data-i18n="item_camarao_solar_desc">Empanado e gratinado com queijo,
+                            arroz à piamontese e fritos</p>
                     </div>
                     <span class="price">R$ 170,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Caldeirada de Pescada Amarela</h3>
-                        <p class="description">Pescada, camarão, ovo cozido, legumes, arroz branco e pirão</p>
+                        <h3 data-i18n="item_caldeirada_pescada_title">Caldeirada de Pescada Amarela</h3>
+                        <p class="description" data-i18n="item_caldeirada_pescada_desc">Pescada, camarão, ovo cozido,
+                            legumes, arroz branco e pirão</p>
                     </div>
                     <span class="price">R$ 225,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Peixe Frito Regional</h3>
-                        <p class="description">Arroz branco, farofa e vinagrete com feijão manteiguinha</p>
+                        <h3 data-i18n="item_peixe_frito_regional_title">Peixe Frito Regional</h3>
+                        <p class="description" data-i18n="item_peixe_frito_regional_desc">Arroz branco, farofa e
+                            vinagrete com feijão manteiguinha</p>
                     </div>
                     <span class="price">R$ 172,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Pescada ao Solar</h3>
-                        <p class="description">Empanado na farinha especial, arroz cremoso e purê de batata.</p>
+                        <h3 data-i18n="item_pescada_solar_title">Pescada ao Solar</h3>
+                        <p class="description" data-i18n="item_pescada_solar_desc">Empanado na farinha especial, arroz
+                            cremoso e purê de batata.</p>
                     </div>
                     <span class="price">R$ 162,00</span>
                 </div>
@@ -435,19 +483,20 @@
 
         <!-- Risoto & Massa (Replacement for Peixes) -->
         <section id="peixes" class="menu-section">
-            <h2 class="section-title">Risoto & Massa</h2>
+            <h2 class="section-title" data-i18n="section_peixes_title">Risoto & Massa</h2>
             <div class="menu-items">
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Peixe Amazônico na crosta de alho</h3>
-                        <p class="description">Filhote, risoto de parmesão e molho de azeitona preta</p>
+                        <h3 data-i18n="item_peixe_amazonico_title">Peixe Amazônico na crosta de alho</h3>
+                        <p class="description" data-i18n="item_peixe_amazonico_desc">Filhote, risoto de parmesão e molho
+                            de azeitona preta</p>
                     </div>
                     <span class="price">R$ 192,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Espaguete ao molho a bolonhesa</h3>
-                        <p class="description">Individual</p>
+                        <h3 data-i18n="item_espaguete_bolonhesa_title">Espaguete ao molho a bolonhesa</h3>
+                        <p class="description" data-i18n="item_espaguete_bolonhesa_desc">Individual</p>
                     </div>
                     <span class="price">R$ 68,00</span>
                 </div>
@@ -456,27 +505,30 @@
 
         <!-- Carnes -->
         <section id="carnes" class="menu-section">
-            <h2 class="section-title">Carnes</h2>
+            <h2 class="section-title" data-i18n="section_carnes_title">Carnes</h2>
             <div class="menu-items">
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Filé Alfredo</h3>
-                        <p class="description">Filé grelhado e fettuccine ao creme de parmesão ao aroma de bacon</p>
+                        <h3 data-i18n="item_file_alfredo_title">Filé Alfredo</h3>
+                        <p class="description" data-i18n="item_file_alfredo_desc">Filé grelhado e fettuccine ao creme de
+                            parmesão ao aroma de bacon</p>
                     </div>
                     <span class="price">R$ 168,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Filé Solar</h3>
-                        <p class="description">Grelhado ao molho de cebola, arroz piamontese, batata frita e farofa de
+                        <h3 data-i18n="item_file_solar_title">Filé Solar</h3>
+                        <p class="description" data-i18n="item_file_solar_desc">Grelhado ao molho de cebola, arroz
+                            piamontese, batata frita e farofa de
                             ovo</p>
                     </div>
                     <span class="price">R$ 175,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Filé Grelhado Solar</h3>
-                        <p class="description">Grelhado, arroz , farofa e fritas</p>
+                        <h3 data-i18n="item_file_grelhado_solar_title">Filé Grelhado Solar</h3>
+                        <p class="description" data-i18n="item_file_grelhado_solar_desc">Grelhado, arroz , farofa e
+                            fritas</p>
                     </div>
                     <span class="price">R$ 160,00</span>
                 </div>
@@ -485,19 +537,21 @@
 
         <!-- Kids -->
         <section id="kids" class="menu-section">
-            <h2 class="section-title">Kids</h2>
+            <h2 class="section-title" data-i18n="section_kids_title">Kids</h2>
             <div class="menu-items">
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Filé em Cubinhos</h3>
-                        <p class="description">Grelhado em cubo, arroz branco, farofa de ovo e fritas</p>
+                        <h3 data-i18n="item_file_cubinhos_title">Filé em Cubinhos</h3>
+                        <p class="description" data-i18n="item_file_cubinhos_desc">Grelhado em cubo, arroz branco,
+                            farofa de ovo e fritas</p>
                     </div>
                     <span class="price">R$ 96,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Isca à milanesa</h3>
-                        <p class="description">Pescada, arroz branco, farofa e purê de batata</p>
+                        <h3 data-i18n="item_isca_milanesa_title">Isca à milanesa</h3>
+                        <p class="description" data-i18n="item_isca_milanesa_desc">Pescada, arroz branco, farofa e purê
+                            de batata</p>
                     </div>
                     <span class="price">R$ 90,00</span>
                 </div>
@@ -508,32 +562,33 @@
 
         <!-- Caldos e Sopas -->
         <section id="caldos" class="menu-section">
-            <h2 class="section-title">Caldos e Sopas</h2>
-            <p style="text-align: center; margin-bottom: 20px; font-style: italic; color: var(--light-text);">(porção
+            <h2 class="section-title" data-i18n="section_caldos_title">Caldos e Sopas</h2>
+            <p style="text-align: center; margin-bottom: 20px; font-style: italic; color: var(--light-text);"
+                data-i18n="section_caldos_subtitle">(porção
                 individual, acompanha torradas)</p>
             <div class="menu-items">
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Sopa de Caranguejo</h3>
+                        <h3 data-i18n="item_sopa_caranguejo_title">Sopa de Caranguejo</h3>
                     </div>
                     <span class="price">R$ 68,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Canja</h3>
+                        <h3 data-i18n="item_canja_title">Canja</h3>
                     </div>
                     <span class="price">R$ 54,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Caldo de Legumes</h3>
+                        <h3 data-i18n="item_caldo_legumes_title">Caldo de Legumes</h3>
                     </div>
                     <span class="price">R$ 50,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Caldo de Tucupi</h3>
-                        <p class="description">Jambú e camarão</p>
+                        <h3 data-i18n="item_caldo_tucupi_title">Caldo de Tucupi</h3>
+                        <p class="description" data-i18n="item_caldo_tucupi_desc">Jambú e camarão</p>
                     </div>
                     <span class="price">R$ 42,00</span>
                 </div>
@@ -544,28 +599,31 @@
 
         <!-- Burgers -->
         <section id="burgers" class="menu-section">
-            <h2 class="section-title">Burgers</h2>
-            <p style="text-align: center; margin-bottom: 20px; font-weight: bold; color: var(--secondary-color);">
+            <h2 class="section-title" data-i18n="section_burgers_title">Burgers</h2>
+            <p style="text-align: center; margin-bottom: 20px; font-weight: bold; color: var(--secondary-color);"
+                data-i18n="section_burgers_subtitle">
                 Acompanha salada de mix de folhas, tomate, cenoura ralada e cebola roxa</p>
             <div class="menu-items">
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Filé do Reino</h3>
-                        <p class="description">Pão Baguete, filé, queijo do reino e fritas</p>
+                        <h3 data-i18n="item_file_do_reino_title">Filé do Reino</h3>
+                        <p class="description" data-i18n="item_file_do_reino_desc">Pão Baguete, filé, queijo do reino e
+                            fritas</p>
                     </div>
                     <span class="price">R$ 55,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Burger Solar</h3>
-                        <p class="description">Pão, blend artesanal, queijo, calabresa, ovo e batata rústica</p>
+                        <h3 data-i18n="item_burger_solar_title">Burger Solar</h3>
+                        <p class="description" data-i18n="item_burger_solar_desc">Pão, blend artesanal, queijo,
+                            calabresa, ovo e batata rústica</p>
                     </div>
                     <span class="price">R$ 50,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Burger kids</h3>
-                        <p class="description">Pão, blend artesanal e queijo</p>
+                        <h3 data-i18n="item_burger_kids_title">Burger kids</h3>
+                        <p class="description" data-i18n="item_burger_kids_desc">Pão, blend artesanal e queijo</p>
                     </div>
                     <span class="price">R$ 38,00</span>
                 </div>
@@ -576,59 +634,59 @@
 
         <!-- Porções -->
         <section id="porcoes" class="menu-section">
-            <h2 class="section-title">Porções</h2>
+            <h2 class="section-title" data-i18n="section_porcoes_title">Porções</h2>
             <div class="menu-items">
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Feijão</h3>
+                        <h3 data-i18n="item_feijao_title">Feijão</h3>
                     </div>
                     <span class="price">R$ 25,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Purê</h3>
+                        <h3 data-i18n="item_pure_title">Purê</h3>
                     </div>
                     <span class="price">R$ 22,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Arroz branco</h3>
+                        <h3 data-i18n="item_arroz_branco_title">Arroz branco</h3>
                     </div>
                     <span class="price">R$ 18,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Arroz Piamontese</h3>
+                        <h3 data-i18n="item_arroz_piamontese_title">Arroz Piamontese</h3>
                     </div>
                     <span class="price">R$ 28,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Farofa simples</h3>
+                        <h3 data-i18n="item_farofa_simples_title">Farofa simples</h3>
                     </div>
                     <span class="price">R$ 12,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Farofa de Banana</h3>
+                        <h3 data-i18n="item_farofa_banana_title">Farofa de Banana</h3>
                     </div>
                     <span class="price">R$ 16,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Farofa de ovo</h3>
+                        <h3 data-i18n="item_farofa_ovo_title">Farofa de ovo</h3>
                     </div>
                     <span class="price">R$ 15,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Vinagrete</h3>
+                        <h3 data-i18n="item_vinagrete_title">Vinagrete</h3>
                     </div>
                     <span class="price">R$ 12,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Torrada</h3>
+                        <h3 data-i18n="item_torrada_title">Torrada</h3>
                     </div>
                     <span class="price">R$ 15,00</span>
                 </div>
@@ -637,46 +695,51 @@
 
         <!-- Sobremesas -->
         <section id="sobremesas" class="menu-section">
-            <h2 class="section-title">Sobremesas</h2>
+            <h2 class="section-title" data-i18n="section_sobremesas_title">Sobremesas</h2>
             <div class="menu-items">
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Salada de Frutas Solar</h3>
-                        <p class="description">Frutas da estação, iogurte natural e geleia de morango</p>
+                        <h3 data-i18n="item_salada_frutas_solar_title">Salada de Frutas Solar</h3>
+                        <p class="description" data-i18n="item_salada_frutas_solar_desc">Frutas da estação, iogurte
+                            natural e geleia de morango</p>
                     </div>
                     <span class="price">R$ 38,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Pudim de Leite</h3>
+                        <h3 data-i18n="item_pudim_leite_title">Pudim de Leite</h3>
                     </div>
                     <span class="price">R$ 30,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Suflê de Chocolate</h3>
-                        <p class="description">Creme de cupuaçú com cobertura de casca brulée</p>
+                        <h3 data-i18n="item_sufle_chocolate_title">Suflê de Chocolate</h3>
+                        <p class="description" data-i18n="item_sufle_chocolate_desc">Creme de cupuaçú com cobertura de
+                            casca brulée</p>
                     </div>
                     <span class="price">R$ 50,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Brulée de Cupuaçú</h3>
-                        <p class="description">Creme de cupuaçú com cobertura de casca brulée</p>
+                        <h3 data-i18n="item_brulee_cupuacu_title">Brulée de Cupuaçú</h3>
+                        <p class="description" data-i18n="item_brulee_cupuacu_desc">Creme de cupuaçú com cobertura de
+                            casca brulée</p>
                     </div>
                     <span class="price">R$ 40,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Duo Brownie</h3>
-                        <p class="description">Brownie, sorvete de creme, creme de chocolate</p>
+                        <h3 data-i18n="item_duo_brownie_title">Duo Brownie</h3>
+                        <p class="description" data-i18n="item_duo_brownie_desc">Brownie, sorvete de creme, creme de
+                            chocolate</p>
                     </div>
                     <span class="price">R$ 50,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Tartelete de Morango</h3>
-                        <p class="description">Casquinha crocante, creme de patissière, morango e chantilly</p>
+                        <h3 data-i18n="item_tartelete_morango_title">Tartelete de Morango</h3>
+                        <p class="description" data-i18n="item_tartelete_morango_desc">Casquinha crocante, creme de
+                            patissière, morango e chantilly</p>
                     </div>
                     <span class="price">R$ 44,00</span>
                 </div>
@@ -685,9 +748,10 @@
 
         <!-- Bebidas & Cerveja Combine -->
         <section id="bebidas" class="menu-section">
-            <h2 class="section-title">Bebidas</h2>
+            <h2 class="section-title" data-i18n="section_bebidas_title">Bebidas</h2>
 
-            <h3 style="text-align:center; margin: 20px 0; font-family: var(--font-heading); font-size: 1.4rem;">Cervejas
+            <h3 style="text-align:center; margin: 20px 0; font-family: var(--font-heading); font-size: 1.4rem;">
+                <span data-i18n="section_bebidas_subtitle_cervejas">Cervejas</span>
                 <br><span
                     style="font-size: 0.9rem; font-family: var(--font-body); font-weight: 300; text-transform: none;">(Long
                     Neck)</span>
@@ -695,146 +759,148 @@
             <div class="menu-items">
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Tijuca Pilsen, Tijuca Puro Malte, Kroland e Silver</h3>
+                        <h3 data-i18n="item_cervejas_list_title">Tijuca Pilsen, Tijuca Puro Malte, Kroland e Silver</h3>
                     </div>
                     <span class="price">R$ 15,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Cerpa Export</h3>
+                        <h3 data-i18n="item_cerpa_export_title">Cerpa Export</h3>
                     </div>
                     <span class="price">R$ 17,00</span>
                 </div>
             </div>
 
             <!-- Doses -->
-            <h3 style="text-align:center; margin: 30px 0 20px 0; font-family: var(--font-heading); font-size: 1.4rem;">
+            <h3 style="text-align:center; margin: 30px 0 20px 0; font-family: var(--font-heading); font-size: 1.4rem;"
+                data-i18n="section_bebidas_subtitle_doses">
                 Doses</h3>
             <div class="menu-items">
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Whisky Old Parr</h3>
+                        <h3 data-i18n="item_whisky_old_parr_title">Whisky Old Parr</h3>
                     </div>
                     <span class="price">R$ 30,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Whisky Johnnie Walker Red</h3>
+                        <h3 data-i18n="item_whisky_red_title">Whisky Johnnie Walker Red</h3>
                     </div>
                     <span class="price">R$ 23,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Vodka (Importada)</h3>
+                        <h3 data-i18n="item_vodka_importada_title">Vodka (Importada)</h3>
                     </div>
                     <span class="price">R$ 28,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Tequila</h3>
+                        <h3 data-i18n="item_tequila_title">Tequila</h3>
                     </div>
                     <span class="price">R$ 28,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Cointreau</h3>
+                        <h3 data-i18n="item_cointreau_title">Cointreau</h3>
                     </div>
                     <span class="price">R$ 32,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Rum</h3>
+                        <h3 data-i18n="item_rum_title">Rum</h3>
                     </div>
                     <span class="price">R$ 25,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Gin</h3>
+                        <h3 data-i18n="item_gin_title">Gin</h3>
                     </div>
                     <span class="price">R$ 28,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Cachaça de Jambú</h3>
+                        <h3 data-i18n="item_cachaca_jambu_title">Cachaça de Jambú</h3>
                     </div>
                     <span class="price">R$ 22,00</span>
                 </div>
             </div>
 
-            <h3 style="text-align:center; margin: 30px 0 20px 0; font-family: var(--font-heading); font-size: 1.4rem;">
+            <h3 style="text-align:center; margin: 30px 0 20px 0; font-family: var(--font-heading); font-size: 1.4rem;"
+                data-i18n="section_bebidas_subtitle_nao_alcoolicos">
                 Não Alcoólicos</h3>
             <div class="menu-items">
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Água sem gás</h3>
+                        <h3 data-i18n="item_agua_sem_gas_title">Água sem gás</h3>
                     </div>
                     <span class="price">R$ 7,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Água com gás</h3>
+                        <h3 data-i18n="item_agua_com_gas_title">Água com gás</h3>
                     </div>
                     <span class="price">R$ 10,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Refrigerante em lata</h3>
+                        <h3 data-i18n="item_refrigerante_lata_title">Refrigerante em lata</h3>
                     </div>
                     <span class="price">R$ 9,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Sucos (Consultar garçom)</h3>
+                        <h3 data-i18n="item_sucos_title">Sucos (Consultar garçom)</h3>
                     </div>
                     <span class="price">R$ 12,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Shot Verde do Solar</h3>
+                        <h3 data-i18n="item_shot_verde_solar_title">Shot Verde do Solar</h3>
                     </div>
                     <span class="price">R$ 18,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Shot de limão</h3>
+                        <h3 data-i18n="item_shot_limao_title">Shot de limão</h3>
                     </div>
                     <span class="price">R$ 6,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Água tônica Schweppes</h3>
+                        <h3 data-i18n="item_agua_tonica_title">Água tônica Schweppes</h3>
                     </div>
                     <span class="price">R$ 12,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Água de coco (Consultar garçom)</h3>
+                        <h3 data-i18n="item_agua_coco_title">Água de coco (Consultar garçom)</h3>
                     </div>
                     <span class="price">R$ 12,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Energético (monster e red bull)</h3>
+                        <h3 data-i18n="item_energetico_title">Energético (monster e red bull)</h3>
                     </div>
                     <span class="price">R$ 20,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Milkshake</h3>
-                        <p class="description">chocolate, morango e açaí</p>
+                        <h3 data-i18n="item_milkshake_title">Milkshake</h3>
+                        <p class="description" data-i18n="item_milkshake_desc">chocolate, morango e açaí</p>
                     </div>
                     <span class="price">R$ 32,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Vitamina</h3>
-                        <p class="description">mamão, banana e leite</p>
+                        <h3 data-i18n="item_vitamina_title">Vitamina</h3>
+                        <p class="description" data-i18n="item_vitamina_desc">mamão, banana e leite</p>
                     </div>
                     <span class="price">R$ 24,00</span>
                 </div>
                 <div class="menu-item">
                     <div class="item-info">
-                        <h3>Café Expresso</h3>
+                        <h3 data-i18n="item_cafe_expresso_title">Café Expresso</h3>
                     </div>
                     <span class="price">R$ 10,00</span>
                 </div>
@@ -851,25 +917,25 @@
                         <i class="fas fa-smoking fa-stack-1x"></i>
                         <i class="fas fa-ban fa-stack-2x" style="color:var(--white); opacity: 0.8;"></i>
                     </span>
-                    <span>Proibido Fumar</span>
+                    <span data-i18n="footer_prohibit_smoking">Proibido Fumar</span>
                 </div>
                 <div class="prohibit-item">
                     <span class="fa-stack fa-1x">
                         <i class="fas fa-snowflake fa-stack-1x"></i>
                         <i class="fas fa-ban fa-stack-2x" style="color:var(--white); opacity: 0.8;"></i>
                     </span>
-                    <span>Proibido Cooler</span>
+                    <span data-i18n="footer_prohibit_coolers">Proibido Cooler</span>
                 </div>
                 <div class="prohibit-item">
                     <span class="fa-stack fa-1x">
                         <i class="fas fa-paw fa-stack-1x"></i>
                         <i class="fas fa-ban fa-stack-2x" style="color:var(--white); opacity: 0.8;"></i>
                     </span>
-                    <span>Proibido Pet's</span>
+                    <span data-i18n="footer_prohibit_pets">Proibido Pet's</span>
                 </div>
                 <div class="prohibit-item">
                     <i class="fas fa-volume-xmark" style="font-size: 2rem;"></i>
-                    <span>Proibido Caixa de Som</span>
+                    <span data-i18n="footer_prohibit_sound">Proibido Caixa de Som</span>
                 </div>
             </div>
             <div class="footer-branding">

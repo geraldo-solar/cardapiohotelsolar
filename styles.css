@@ -402,3 +402,59 @@ footer {
     text-align: center;
     font-weight: 400;
 }
+
+/* Language Selector */
+.language-selector-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 20px;
+    /* Extra space at bottom of hero */
+}
+
+.lang-label {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--white);
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+}
+
+.language-selector {
+    display: flex;
+    gap: 15px;
+    /* Increased gap for flags */
+}
+
+.lang-btn {
+    background: transparent;
+    border: 2px solid transparent;
+    /* Transparent border by default */
+    border-radius: 50%;
+    /* Circular touch target */
+    padding: 5px;
+    font-size: 1.8rem;
+    /* Large emojis */
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    line-height: 1;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lang-btn:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.lang-btn.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
