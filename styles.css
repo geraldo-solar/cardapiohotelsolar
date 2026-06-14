@@ -1,19 +1,17 @@
 :root {
-    --primary-color: #8D5524;
-    /* Earthy Brown/Terra */
-    --secondary-color: #3E2723;
-    /* Dark Brown */
-    --accent-color: #FBC02D;
-    /* Mustard Yellow */
-    --bg-color: #EFEBE9;
-    /* Light Sand/Earthy Tone */
+    --primary-color: #2D2A26;
+    /* Deep Woodcut Charcoal */
+    --secondary-color: #C29545;
+    /* Radiant Gold */
+    --accent-color: #C29545;
+    /* Radiant Gold */
+    --bg-color: #FAF6EE;
+    /* Cream Paper Background */
     --card-bg: #ffffff;
-    --text-color: #3E2723;
-    /* Dark Brown for text */
-    --light-text: #6D4C41;
-    /* Muted Brown for lighter text */
+    --text-color: #2D2A26;
+    --light-text: #5C5750;
     --white: #ffffff;
-    --border-radius: 4px;
+    --border-radius: 6px;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -30,7 +28,7 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     scroll-behavior: smooth;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238D5524' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg width='120' height='60' viewBox='0 0 120 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,15 Q30,5 60,15 T120,15 M0,45 Q30,35 60,45 T120,45' fill='none' stroke='%23C29545' stroke-width='1.2' stroke-opacity='0.045'/%3E%3C/svg%3E");
 }
 
 /* Typography */
@@ -52,20 +50,33 @@ a {
 /* Hero Section */
 .hero {
     position: relative;
-    min-height: 50vh;
-    /* Changed from height: 50vh */
+    min-height: 45vh;
     height: auto;
-    /* Allow it to grow */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: var(--primary-color);
-    color: #fff;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
     overflow: hidden;
     padding: 60px 20px;
-    /* Added padding to prevent overflow */
+    border-bottom: 3px double var(--primary-color);
 }
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 2px solid var(--primary-color);
+    pointer-events: none;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+/* Removed SVG Woodcut Decorations styling */
 
 .hero-content {
     position: relative;
@@ -87,9 +98,8 @@ a {
 .reserva {
     font-family: 'Kaushan Script', cursive;
     font-size: 4rem;
-    color: #fff;
+    color: var(--primary-color);
     transform: rotate(-5deg) translateY(10px);
-    /* Slight tilt for handwriting feel */
     margin-bottom: 5px;
 }
 
@@ -97,16 +107,17 @@ a {
     font-family: 'Inter', sans-serif;
     font-size: 1.8rem;
     font-weight: 300;
-    color: #fff;
+    color: var(--primary-color);
     letter-spacing: 0.3em;
     text-transform: uppercase;
 }
 
 .brand-logo {
-    max-width: 320px;
+    max-width: 220px;
     height: auto;
-    margin-bottom: 30px;
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+    margin-bottom: 25px;
+    /* Colorize white brand logo to Deep Charcoal (#2D2A26) */
+    filter: brightness(0) saturate(100%) invert(14%) sepia(6%) saturate(1142%) hue-rotate(339deg) brightness(94%) contrast(90%);
 }
 
 .menu-identifier {
@@ -118,12 +129,11 @@ a {
 .menu-title {
     font-family: var(--font-heading);
     font-size: 2.2rem;
-    color: var(--white);
+    color: var(--primary-color);
     letter-spacing: 5px;
     text-transform: uppercase;
     font-weight: 400;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .menu-identifier::after {
@@ -134,7 +144,7 @@ a {
     transform: translateX(-50%);
     width: 60px;
     height: 2px;
-    background-color: var(--white);
+    background-color: var(--primary-color);
     opacity: 0.7;
 }
 
@@ -149,10 +159,10 @@ a {
     font-family: var(--font-heading);
     font-style: italic;
     font-size: 1rem;
-    color: var(--white);
-    opacity: 0.9;
-    letter-spacing: 1px;
-    font-weight: 300;
+    color: var(--primary-color);
+    opacity: 0.8;
+    letter-spacing: 1.5px;
+    font-weight: 600;
 }
 
 .sponsors {
@@ -171,21 +181,20 @@ a {
 }
 
 .coke {
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
+    /* Colorize white Coke logo to our Charcoal color (#2D2A26) */
+    filter: brightness(0) saturate(100%) invert(15%) sepia(5%) saturate(1394%) hue-rotate(339deg) brightness(91%) contrast(92%);
+    opacity: 0.85;
     height: 55px;
-    /* Slightly larger customization */
 }
 
 .cerpa {
-    /* Visual balance adjustment */
-    filter: grayscale(1) contrast(1.5);
-    mix-blend-mode: screen;
-    opacity: 0.95;
+    opacity: 1;
     width: 130px;
     height: auto;
     max-width: none;
     transform: translateY(-5px);
+    /* Colorize white logo to Gold (#C29545) */
+    filter: brightness(0) saturate(100%) invert(62%) sepia(43%) saturate(542%) hue-rotate(4deg) brightness(90%) contrast(87%);
 }
 
 
@@ -193,35 +202,45 @@ a {
 .sticky-nav {
     position: sticky;
     top: 0;
-    background-color: var(--primary-color);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(250, 246, 238, 0.96);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(45, 42, 38, 0.05);
     z-index: 100;
-    padding: 10px 0;
+    padding: 12px 0;
     overflow-x: auto;
     white-space: nowrap;
+    border-bottom: 1px solid rgba(45, 42, 38, 0.08);
+    scrollbar-width: none;
+}
+
+.sticky-nav::-webkit-scrollbar {
+    display: none;
 }
 
 .sticky-nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 0 20px;
+    gap: 24px;
+    padding: 0 24px;
 }
 
 .sticky-nav a {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.7);
-    padding: 5px 0;
-    border-bottom: 2px solid transparent;
+    color: var(--light-text);
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
 }
 
 .sticky-nav a.active,
 .sticky-nav a:hover {
-    color: #ffffff;
-    border-bottom-color: #ffffff;
+    color: var(--primary-color);
+    background-color: rgba(194, 149, 69, 0.12);
 }
 
 /* Main Menu Content */
@@ -232,38 +251,76 @@ main {
 }
 
 .menu-section {
-    margin-bottom: 50px;
-    padding: 30px;
+    position: relative;
+    margin-bottom: 40px;
+    padding: 35px;
     background: var(--card-bg);
     border-radius: var(--border-radius);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
-    border: 1px solid rgba(141, 85, 36, 0.1);
+    box-shadow: 0 6px 18px rgba(45, 42, 38, 0.03);
+    border: 1px solid var(--primary-color);
+    overflow: hidden;
+}
+
+.menu-section::after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    border: 1px solid rgba(45, 42, 38, 0.12);
+    pointer-events: none;
+    border-radius: calc(var(--border-radius) - 2px);
 }
 
 .section-title {
     font-size: 1.8rem;
     text-align: center;
     margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--secondary-color);
     display: table;
-    /* Shrink to fit content */
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+}
+
+.section-title::before,
+.section-title::after {
+    content: '❖';
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.section-title::before {
+    left: -25px;
+}
+
+.section-title::after {
+    right: -25px;
 }
 
 .menu-items {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 8px;
 }
 
 .menu-item {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    border-bottom: 1px dotted #ccc;
-    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(45, 42, 38, 0.15);
+    padding: 12px 6px;
+    transition: background-color 0.2s ease, padding-left 0.2s ease;
+}
+
+.menu-item:hover {
+    padding-left: 12px;
+    background-color: rgba(194, 149, 69, 0.04);
 }
 
 .menu-item:last-child {
@@ -276,37 +333,39 @@ main {
 }
 
 .item-info h3 {
-    font-size: 1rem;
-    margin-bottom: 4px;
-    color: var(--secondary-color);
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+    color: var(--primary-color);
     font-weight: 700;
     text-transform: none;
-    /* Keep items mostly proper case */
     letter-spacing: 0;
     font-family: var(--font-body);
 }
 
 .description {
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     color: var(--light-text);
     font-style: italic;
+    font-weight: 300;
 }
 
 .price {
     font-weight: 700;
-    color: var(--primary-color);
-    font-size: 1rem;
+    color: var(--accent-color);
+    font-size: 1.1rem;
     white-space: nowrap;
     font-family: var(--font-body);
+    padding-left: 10px;
 }
 
 /* Footer */
 footer {
     background-color: var(--primary-color);
-    color: #fff;
-    padding: 40px 20px;
+    color: var(--bg-color);
+    padding: 50px 20px;
     text-align: center;
     margin-top: 60px;
+    border-top: 3px double var(--secondary-color);
 }
 
 .prohibitions {
@@ -321,7 +380,6 @@ footer {
 .prohibit-item {
     display: flex;
     flex-direction: column;
-    /* Icon above text */
     align-items: center;
     gap: 10px;
 }
@@ -329,13 +387,14 @@ footer {
 .prohibit-item i,
 .prohibit-item .fa-stack {
     font-size: 1.5rem;
-    color: #fff;
+    color: var(--secondary-color);
 }
 
 .prohibit-item span {
     font-size: 0.9rem;
     font-weight: 500;
     opacity: 0.9;
+    color: var(--bg-color);
 }
 
 /* Responsive */
@@ -378,29 +437,29 @@ footer {
     max-width: 180px;
     height: auto;
     margin-bottom: 10px;
+    /* Colorize white logo to Gold (#C29545) on dark background */
+    filter: brightness(0) saturate(100%) invert(62%) sepia(43%) saturate(542%) hue-rotate(4deg) brightness(90%) contrast(87%) drop-shadow(0 2px 4px rgba(0,0,0,0.2));
 }
 
 .footer-address {
     font-family: var(--font-body);
     font-size: 0.9rem;
-    color: var(--accent-color);
-    /* Gold */
+    color: var(--secondary-color);
     margin: 0;
     letter-spacing: 1.5px;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .footer-contact {
     font-family: var(--font-body);
     font-size: 1.1rem;
-    color: var(--accent-color);
-    /* Gold */
+    color: var(--white);
     margin: 5px 0 0 0;
     letter-spacing: 1px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 /* Language Selector */
@@ -411,50 +470,305 @@ footer {
     align-items: center;
     gap: 10px;
     padding-bottom: 20px;
-    /* Extra space at bottom of hero */
 }
 
 .lang-label {
     font-family: var(--font-body);
     font-size: 0.9rem;
-    color: var(--white);
-    opacity: 0.9;
+    color: var(--primary-color);
+    opacity: 0.95;
     letter-spacing: 0.5px;
-    font-weight: 300;
+    font-weight: 600;
 }
 
 .language-selector {
     display: flex;
     gap: 15px;
-    /* Increased gap for flags */
 }
 
 .lang-btn {
-    background: transparent;
-    border: 2px solid transparent;
-    /* Transparent border by default */
+    background: var(--white);
+    border: 1px solid rgba(45, 42, 38, 0.12);
     border-radius: 50%;
-    /* Circular touch target */
     padding: 5px;
-    font-size: 1.8rem;
-    /* Large emojis */
+    font-size: 1.5rem;
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
     line-height: 1;
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
 }
 
 .lang-btn:hover {
     transform: scale(1.1);
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(45, 42, 38, 0.05);
 }
 
 .lang-btn.active {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    background-color: rgba(194, 149, 69, 0.12);
+    border-color: var(--secondary-color);
+    box-shadow: 0 2px 10px rgba(194, 149, 69, 0.2);
+}
+
+/* --- Cerpa Sponsor Section Premium Styles --- */
+.cerpa-section {
+    border: 2px solid var(--secondary-color) !important;
+    background: linear-gradient(135deg, #ffffff 0%, #FAF6EE 50%, #FAF6EE 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.cerpa-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color), var(--secondary-color)) !important;
+}
+
+.cerpa-header {
+    text-align: center;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.cerpa-section-logo {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 5px;
+    /* Colorize white logo to Gold (#C29545) */
+    filter: brightness(0) saturate(100%) invert(62%) sepia(43%) saturate(542%) hue-rotate(4deg) brightness(90%) contrast(87%) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.cerpa-title {
+    margin-bottom: 5px !important;
+    border-bottom: none !important;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.cerpa-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--light-text);
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+.cerpa-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.cerpa-card {
+    background: var(--white);
+    border-radius: 8px;
+    border: 1px solid rgba(45, 42, 38, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s;
+}
+
+.cerpa-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(45, 42, 38, 0.15);
+    border-color: var(--secondary-color);
+}
+
+.cerpa-img-container {
+    height: 260px;
+    overflow: hidden;
+    position: relative;
+    background-image: url('cerpa-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 15px 10px 15px; /* Give a bit more space at the top and align to bottom */
+    border-bottom: 1px solid rgba(45, 42, 38, 0.08);
+}
+
+.cerpa-img {
+    max-height: 95%; /* Adjust height slightly to ensure shadow fits inside container */
+    max-width: 100%;
+    object-fit: contain; /* Exibe a garrafa inteira de forma limpa e sem cortes */
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.5s ease;
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.25));
+}
+
+.cerpa-card:hover .cerpa-img {
+    transform: scale(1.08) translateY(-5px);
+    filter: drop-shadow(0 16px 24px rgba(0, 0, 0, 0.35));
+}
+
+.cerpa-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--white);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+    z-index: 5;
+}
+
+.cerpa-badge-premium {
+    background: linear-gradient(135deg, #d4af37, #aa7c11);
+}
+
+.cerpa-badge-puro {
+    background: linear-gradient(135deg, #2e7d32, #1b5e20);
+}
+
+.cerpa-badge-refrescante {
+    background: linear-gradient(135deg, #0288d1, #01579b);
+}
+
+.cerpa-badge-gold {
+    background: linear-gradient(135deg, #fbc02d, #f57f17);
+}
+
+.cerpa-badge-gluten-free {
+    background: linear-gradient(135deg, #bdc3c7, #7f8c8d);
+}
+
+.cerpa-card-body {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.cerpa-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.cerpa-beer-title {
+    font-size: 1.25rem !important;
+    font-weight: 700;
+    color: var(--secondary-color) !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+    font-family: var(--font-heading);
+}
+
+.cerpa-abv {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--light-text);
+    background: rgba(45, 42, 38, 0.08);
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.cerpa-beer-desc {
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    color: var(--light-text);
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.cerpa-pairing-box {
+    background: rgba(194, 149, 69, 0.05);
+    border-left: 3px solid var(--secondary-color);
+    padding: 12px 15px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.cerpa-pairing-title {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cerpa-pairing-title i {
+    color: var(--primary-color);
+}
+
+.cerpa-pairing-text {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--text-color);
+    font-style: italic;
+    line-height: 1.4;
+}
+
+.cerpa-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(141, 85, 36, 0.08);
+    padding-top: 15px;
+    margin-top: auto;
+}
+
+.cerpa-temp-info {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    color: var(--light-text);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cerpa-temp-info i {
+    color: var(--primary-color);
+}
+
+.cerpa-temp-val {
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.cerpa-price {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+}
+
+/* Responsividade do grid Cerpa */
+@media (max-width: 768px) {
+    .cerpa-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .cerpa-img-container {
+        height: 200px;
+    }
 }
