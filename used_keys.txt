@@ -10,7 +10,6 @@ item_arroz_branco_title
 item_arroz_piamontese_title
 item_batata_frita_desc
 item_batata_frita_title
-item_bougainville_title
 item_brulee_cupuacu_desc
 item_brulee_cupuacu_title
 item_burger_kids_desc
@@ -49,8 +48,6 @@ item_coquetel_frutas_title
 item_duo_brownie_desc
 item_duo_brownie_title
 item_energetico_title
-item_espadarte_desc
-item_espadarte_title
 item_espaguete_bolonhesa_desc
 item_espaguete_bolonhesa_title
 item_farofa_banana_title
@@ -69,10 +66,6 @@ item_file_grelhado_solar_desc
 item_file_grelhado_solar_title
 item_file_solar_desc
 item_file_solar_title
-item_fitzgerald_desc
-item_fitzgerald_title
-item_garibaldi_desc
-item_garibaldi_title
 item_gin_mule_desc
 item_gin_mule_title
 item_gin_title
@@ -86,14 +79,10 @@ item_la_passion_desc
 item_la_passion_title
 item_linguica_jambu_desc
 item_linguica_jambu_title
-item_long_island_desc
-item_long_island_title
 item_macarico_desc
 item_macarico_title
 item_macaxeira_bacon_desc
 item_macaxeira_bacon_title
-item_maracujack_desc
-item_maracujack_title
 item_marguerita_desc
 item_marguerita_title
 item_milkshake_desc
@@ -124,10 +113,6 @@ item_pescada_solar_desc
 item_pescada_solar_title
 item_pescada_tucupi_desc
 item_pescada_tucupi_title
-item_pirabas_desc
-item_pirabas_title
-item_porto_grande_desc
-item_porto_grande_title
 item_pudim_leite_title
 item_pure_title
 item_refrigerante_lata_title
