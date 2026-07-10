@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<title>Coquetelaria - Cardápio 29x10 (Impressão)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page {
+    size: 290mm 100mm;
+    margin: 0;
+  }
+
+  :root {
+    --bg: #0b1a10;
+    --bg-soft: #122619;
+    --gold: #C29545;
+    --gold-soft: rgba(194,149,69,0.35);
+    --cream: #FAF6EE;
+    --light: #B7AC9B;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--cream);
+    background: var(--bg);
+    font-size: 7pt;
+    line-height: 1.25;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    padding: 6mm 7mm 5mm 7mm;
+    page-break-after: always;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* ---------- Back page ---------- */
+  .back-page {
+    height: 100mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .back-content {
+    display: flex;
+    align-items: center;
+    gap: 9mm;
+  }
+  .back-content img { height: 24mm; display: block; }
+  .back-content img.logo-reserva { height: 17.2mm; }
+  .back-divider {
+    width: 0.8pt;
+    height: 18mm;
+    background: var(--gold-soft);
+  }
+
+  /* ---------- Header ---------- */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3.2mm;
+    padding-bottom: 2.4mm;
+    border-bottom: 1.2pt double var(--gold);
+  }
+  .brands {
+    display: flex;
+    align-items: center;
+    gap: 3.5mm;
+  }
+  .brands img { height: 9mm; display: block; }
+  .brands img.logo-reserva { height: 6.4mm; }
+  .brands .divider {
+    width: 0.6pt;
+    height: 6.5mm;
+    background: var(--gold-soft);
+  }
+
+  .title-block { text-align: right; }
+  .title-block h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 15pt;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    color: var(--cream);
+    font-weight: 800;
+  }
+  .title-block .subline {
+    margin-top: 0.8mm;
+    font-size: 6pt;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* ---------- Columns ---------- */
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 5.5mm;
+    align-items: start;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 9pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--gold);
+    border-bottom: 1pt solid var(--gold);
+    padding-bottom: 1mm;
+    margin-bottom: 1.8mm;
+    display: flex;
+    align-items: baseline;
+    gap: 1.4mm;
+  }
+  .section-title::before {
+    content: '';
+    width: 1.7mm;
+    height: 1.7mm;
+    background: var(--gold);
+    transform: rotate(45deg);
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  .item {
+    margin-bottom: 1.5mm;
+    padding-bottom: 1.1mm;
+    border-bottom: 0.4pt dotted rgba(250,246,238,0.16);
+  }
+  .item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1.5mm;
+  }
+  .item-name {
+    font-weight: 700;
+    font-size: 7.4pt;
+    color: var(--cream);
+  }
+  .item-price {
+    font-weight: 700;
+    font-size: 7.4pt;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+  .item-desc {
+    font-size: 6pt;
+    font-style: italic;
+    color: var(--light);
+    margin-top: 0.4mm;
+    line-height: 1.22;
+  }
+
+  .foot-note {
+    margin-top: 2.6mm;
+    text-align: center;
+    font-size: 5.6pt;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--light);
+    padding-top: 1.8mm;
+    border-top: 0.5pt solid rgba(250,246,238,0.16);
+  }
+</style>
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="header">
+      <div class="brands">
+        <img src="hotel-solar-logo.png" alt="Hotel Solar">
+        <span class="divider"></span>
+        <img class="logo-reserva" src="logo-reserva-cropped.png" alt="Reserva Solar">
+      </div>
+      <div class="title-block">
+        <h1>Coquetelaria</h1>
+        <div class="subline">Hotel Solar &bull; Reserva Solar</div>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="col">
+        <div class="section-title">Autorais</div>
+        <div class="item">
+          <div class="item-row"><span class="item-name">O Barquinho</span><span class="item-price">R$ 47,00</span></div>
+          <div class="item-desc">Rum, Aperol, abacaxi, xarope de açúcar e limão.</div>
+        </div>
+        <div class="item">
+          <div class="item-row"><span class="item-name">Maçarico</span><span class="item-price">R$ 47,00</span></div>
+          <div class="item-desc">Gin de jambu, limão siciliano, xarope de açúcar e angustura.</div>
+        </div>
+        <div class="item">
+          <div class="item-row"><span class="item-name">Olho Grego</span><span class="item-price">R$ 49,00</span></div>
+          <div class="item-desc">Gin, curaçau blue, limão siciliano e espuma de gengibre.</div>
+        </div>
+        <div class="item">
+          <div class="item-row"><span class="item-name">La Passion</span><span class="item-price">R$ 49,00</span></div>
+          <div class="item-desc">Vodka, morango, pitaya vermelha, açúcar e gelo.</div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="section-title">Atuais</div>
+        <div class="item">
+          <div class="item-row"><span class="item-name">Moscow Mule</span><span class="item-price">R$ 45,00</span></div>
+          <div class="item-desc">Vodka, limão siciliano, xarope de gengibre e espuma de gengibre.</div>
+        </div>
+        <div class="item">
+          <div class="item-row"><span class="item-name">Gin Mule</span><span class="item-price">R$ 49,00</span></div>
+          <div class="item-desc">Gin, limão siciliano, xarope de gengibre e espuma de gengibre.</div>
+        </div>
+        <div class="item">
+          <div class="item-row"><span class="item-name">Gin Tônica</span><span class="item-price">R$ 45,00</span></div>
+          <div class="item-desc">Gin, água tônica e harmonização com especiarias.</div>
+        </div>
+        <div class="item">
+          <div class="item-row"><span class="item-name">Spritz Aperol</span><span class="item-price">R$ 47,00</span></div>
+          <div class="item-desc">Espumante, aperol e soda.</div>
+        </div>
+        <div class="item">
+          <div class="item-row"><span class="item-name">Mimosa</span><span class="item-price">R$ 32,00</span></div>
+          <div class="item-desc">Espumante e suco de laranja.</div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="section-title">Antológicos</div>
+        <div class="item">
+          <div class="item-row"><span class="item-name">Negroni</span><span class="item-price">R$ 42,00</span></div>
+          <div class="item-desc">Gin, vermute, campari e twist de laranja.</div>
+        </div>
+        <div class="item">
+          <div class="item-row"><span class="item-name">Mojito</span><span class="item-price">R$ 43,00</span></div>
+          <div class="item-desc">Rum, limão e hortelã.</div>
+        </div>
+        <div class="item">
+          <div class="item-row"><span class="item-name">Marguerita</span><span class="item-price">R$ 49,00</span></div>
+          <div class="item-desc">Tequila, cointreau, curaçau blue e limão taiti.</div>
+        </div>
+        <div class="item">
+          <div class="item-row"><span class="item-name">Caipirosca</span><span class="item-price">R$ 45,00</span></div>
+          <div class="item-desc">Vodka importada, frutas da estação, açúcar e gelo.</div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="section-title">Antológicos <span style="font-size:5.5pt; letter-spacing:0; text-transform:none; font-family:'Inter',sans-serif; font-weight:400; color:var(--light);">(cont.)</span></div>
+        <div class="item">
+          <div class="item-row"><span class="item-name">Caipirinha</span><span class="item-price">R$ 35,00</span></div>
+          <div class="item-desc">Cachaça, limão taiti, açúcar e gelo.</div>
+        </div>
+        <div class="item">
+          <div class="item-row"><span class="item-name">Coquetel de Frutas</span><span class="item-price">R$ 49,00</span></div>
+          <div class="item-desc">Mix de frutas, vodka, leite condensado, creme de leite, groselha e chantilly.</div>
+        </div>
+        <div class="section-title" style="margin-top:2.4mm;">Sem Álcool</div>
+        <div class="item">
+          <div class="item-row"><span class="item-name">Coquetel de Frutas</span><span class="item-price">R$ 44,00</span></div>
+          <div class="item-desc">Mix de frutas, leite condensado, creme de leite, groselha e chantilly.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-note">Salinópolis &bull; Pará</div>
+
+  </div>
+
+  <div class="page back-page">
+    <div class="back-content">
+      <img src="hotel-solar-logo.png" alt="Hotel Solar">
+      <span class="back-divider"></span>
+      <img class="logo-reserva" src="logo-reserva-cropped.png" alt="Reserva Solar">
+    </div>
+  </div>
+
+</body>
+</html>

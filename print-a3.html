@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<title>Hotel Solar - Cardápio A3 (Impressão)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Playfair+Display:wght@400;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page {
+    size: A3 landscape;
+    margin: 8mm;
+  }
+
+  :root {
+    --primary: #2D2A26;
+    --primary-soft: #3E3A33;
+    --gold: #C29545;
+    --gold-soft: rgba(194,149,69,0.35);
+    --cream: #FAF6EE;
+    --light: #6b655c;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--primary);
+    background: var(--cream);
+    font-size: 9pt;
+    line-height: 1.32;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    page-break-after: always;
+    position: relative;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* ---------- Header ---------- */
+  .menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 3.5mm;
+    margin-bottom: 5mm;
+    border-bottom: 1.8pt double var(--primary);
+  }
+  .menu-header .brand {
+    display: flex;
+    align-items: center;
+    gap: 4mm;
+  }
+  .menu-header .brand img.logo {
+    height: 18mm;
+    /* Colorize white brand logo to Deep Charcoal for visibility on light background */
+    filter: brightness(0) saturate(100%) invert(14%) sepia(6%) saturate(1142%) hue-rotate(339deg) brightness(94%) contrast(90%);
+  }
+  .menu-header .brand-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19pt;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--primary);
+    font-weight: 800;
+  }
+  .menu-header .brand-text .subline {
+    margin-top: 1.3mm;
+    font-size: 8pt;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+  .menu-header .meta {
+    text-align: right;
+  }
+  .menu-header .meta .sponsor {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2.2mm;
+    margin-bottom: 1.8mm;
+  }
+  .menu-header .meta .sponsor .logo-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    border-radius: 1.4mm;
+    padding: 1.2mm 2.6mm;
+  }
+  .menu-header .meta .sponsor img { height: 7mm; display: block; }
+  .menu-header .meta .sponsor span {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 8pt;
+    color: var(--light);
+  }
+  .menu-header .meta .page-tag {
+    font-size: 7pt;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--light);
+  }
+
+  /* ---------- Columns ---------- */
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 8.5mm;
+    align-items: start;
+  }
+  .col {
+    display: flex;
+    flex-direction: column;
+  }
+  .columns.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 11mm;
+  }
+
+  /* ---------- Section blocks (cards) ---------- */
+  .section-block {
+    break-inside: avoid;
+    margin-bottom: 4mm;
+    background: var(--white);
+    border: 0.6pt solid rgba(45,42,38,0.14);
+    border-radius: 2.2mm;
+    padding: 3.4mm 4mm 3.6mm 4mm;
+    box-shadow: 0 0.5mm 1.4mm rgba(45,42,38,0.07);
+  }
+
+  .kicker {
+    font-size: 7pt;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 1.3mm;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 13.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    color: var(--primary);
+    border-bottom: 1.2pt solid var(--gold);
+    padding-bottom: 1.8mm;
+    margin-bottom: 2.8mm;
+    display: flex;
+    align-items: baseline;
+    gap: 2mm;
+  }
+  .section-title::before {
+    content: '';
+    width: 2.6mm;
+    height: 2.6mm;
+    background: var(--gold);
+    transform: rotate(45deg);
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .section-title .en {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: none;
+    color: var(--light);
+    font-size: 7.8pt;
+    letter-spacing: 0;
+  }
+
+  .section-note {
+    font-size: 7.4pt;
+    font-style: italic;
+    color: var(--gold);
+    margin-bottom: 3mm;
+    font-weight: 600;
+  }
+
+  .item {
+    break-inside: avoid;
+    margin-bottom: 2.4mm;
+    padding-bottom: 1.8mm;
+    border-bottom: 0.4pt dotted rgba(45,42,38,0.2);
+  }
+  .item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 2.5mm;
+  }
+  .item-name {
+    font-weight: 700;
+    font-size: 10.2pt;
+    color: var(--primary);
+  }
+  .item-price {
+    font-weight: 800;
+    font-size: 10.2pt;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+  .item-desc {
+    font-size: 8.3pt;
+    font-style: italic;
+    color: var(--light);
+    line-height: 1.38;
+    margin-top: 1mm;
+  }
+
+  /* ---------- Page 1 only: fill extra vertical space ---------- */
+  .page-1 .section-block {
+    margin-bottom: 4.6mm;
+    padding: 4mm 4.6mm 4.2mm 4.6mm;
+  }
+  .page-1 .section-title {
+    font-size: 14pt;
+    padding-bottom: 2.1mm;
+    margin-bottom: 3.2mm;
+  }
+  .page-1 .item {
+    margin-bottom: 2.8mm;
+    padding-bottom: 2.1mm;
+  }
+  .page-1 .item-name,
+  .page-1 .item-price {
+    font-size: 10.6pt;
+  }
+  .page-1 .item-desc {
+    font-size: 8.6pt;
+    line-height: 1.42;
+    margin-top: 1.2mm;
+  }
+
+  /* ---------- Cerpa premium block ---------- */
+  .cerpa-block {
+    grid-column: 1 / -1;
+    break-inside: avoid;
+    margin: 5mm 0 0 0;
+    padding: 4.6mm 9mm 4.6mm 9mm;
+    border-radius: 4mm;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-soft) 100%);
+    border: 1.5pt solid var(--gold);
+    box-shadow: 0 2mm 5mm rgba(0,0,0,0.32);
+    position: relative;
+    overflow: hidden;
+  }
+  .cerpa-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3mm;
+    padding-bottom: 2.6mm;
+    border-bottom: 0.8pt solid rgba(194,149,69,0.4);
+  }
+  .cerpa-brand {
+    display: flex;
+    align-items: center;
+    gap: 6mm;
+  }
+  .cerpa-brand .logo-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-soft);
+    border: 0.9pt solid var(--gold);
+    border-radius: 2.4mm;
+    padding: 2.6mm 5.4mm;
+  }
+  .cerpa-brand img { height: 18mm; display: block; }
+  .cerpa-brand-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 17pt;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+  }
+  .cerpa-brand-text p {
+    font-size: 8.4pt;
+    font-style: italic;
+    color: rgba(250,246,238,0.75);
+    margin-top: 1mm;
+  }
+  .cerpa-tag {
+    font-size: 8.4pt;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    border: 0.8pt solid var(--gold);
+    border-radius: 1.2mm;
+    padding: 2mm 4.4mm;
+    white-space: nowrap;
+  }
+  .cerpa-flight {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .cerpa-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.6mm 5mm 0 5mm;
+    border-left: 0.5pt solid rgba(250,246,238,0.18);
+  }
+  .cerpa-card:first-child { border-left: none; padding-left: 1mm; }
+  .cerpa-card:last-child { padding-right: 1mm; }
+  .cerpa-photo {
+    height: 26mm;
+    display: block;
+    object-fit: contain;
+    margin-bottom: 3mm;
+    filter: drop-shadow(0 1.6mm 2.6mm rgba(0,0,0,0.5));
+  }
+  .cerpa-card-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 12.8pt;
+    color: var(--gold);
+    line-height: 1.15;
+  }
+  .cerpa-card-abv {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 7.2pt;
+    color: rgba(250,246,238,0.55);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 1.2mm 0 2.6mm 0;
+  }
+  .cerpa-card-note {
+    font-size: 8.6pt;
+    font-style: italic;
+    color: rgba(250,246,238,0.85);
+    line-height: 1.32;
+    flex-grow: 1;
+  }
+  .cerpa-card-price {
+    margin-top: 3mm;
+    padding-top: 2.4mm;
+    width: 100%;
+    border-top: 0.5pt dotted rgba(250,246,238,0.3);
+    font-size: 15.5pt;
+    font-weight: 800;
+    color: var(--white);
+  }
+
+  /* ---------- Footer note ---------- */
+  .foot-note {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 0.1mm;
+    padding-top: 0.2mm;
+    border-top: 0.6pt solid rgba(45,42,38,0.2);
+    font-size: 6.8pt;
+    color: var(--light);
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ======================= PAGE 1 - FRENTE ======================= -->
+<div class="page page-1">
+  <div class="menu-header">
+    <div class="brand">
+      <img class="logo" src="hotel-solar-logo.png" alt="Hotel Solar">
+      <div class="brand-text">
+        <h1>Cardápio</h1>
+        <div class="subline">Comidas</div>
+      </div>
+    </div>
+    <div class="meta">
+      <div class="page-tag">Hotel Solar &bull; Pág. 1/2</div>
+    </div>
+  </div>
+
+  <div class="columns">
+
+    <div class="col">
+    <div class="section-block">
+      <div class="section-title">Entradas</div>
+      <div class="item"><div class="item-row"><span class="item-name">Batata Frita</span><span class="item-price">R$ 44,00</span></div><div class="item-desc">Molho rosé.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Macaxeira frita com bacon</span><span class="item-price">R$ 50,00</span></div><div class="item-desc">Molho rosé.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Filé Aperitivo</span><span class="item-price">R$ 90,00</span></div><div class="item-desc">Molho de cebola e farofa de banana.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Camarão ao alho e óleo</span><span class="item-price">R$ 105,00</span></div><div class="item-desc">Farofa.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Caranguejo Refogado</span><span class="item-price">R$ 72,00</span></div><div class="item-desc">Farofa.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Camarão Crocante</span><span class="item-price">R$ 120,00</span></div><div class="item-desc">Empanado na farinha especial, molho rosé.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Panceta de Porco</span><span class="item-price">R$ 74,00</span></div><div class="item-desc">Assado, pêra gratinada e mostarda com mel.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Ostra com Fonduta de Queijo</span><span class="item-price">R$ 90,00</span></div><div class="item-desc">Creme de parmesão gratinado, torradas (6 und).</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Carpaccio ao Pesto</span><span class="item-price">R$ 69,00</span></div><div class="item-desc">Carne fatiada, pesto, parmesão e torradas.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Isca de Peixe Crocante</span><span class="item-price">R$ 84,00</span></div><div class="item-desc">Farofa e molho rosé.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Linguiça Artesanal com recheio de Jambú</span><span class="item-price">R$ 68,00</span></div><div class="item-desc">Molho de pimenta com tucupi, farofa e vinagrete.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Tábua de Frios</span><span class="item-price">R$ 95,00</span></div><div class="item-desc">Queijos, salame, azeitona, uva, creme de queijo e torradas.</div></div>
+    </div>
+    </div>
+
+    <div class="col">
+    <div class="section-block">
+      <div class="section-title">Peixe &amp; Camarão</div>
+      <div class="item"><div class="item-row"><span class="item-name">Pescada Grelhada a la creme de tucupi</span><span class="item-price">R$ 192,00</span></div><div class="item-desc">Arroz com tucupi, jambú e pirão com camarão.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Pescada Grelhada ao molho de Camarão</span><span class="item-price">R$ 192,00</span></div><div class="item-desc">Arroz branco e purê de batata.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Camarão Crocante Solar</span><span class="item-price">R$ 190,00</span></div><div class="item-desc">Gratinado com queijo, arroz piamontese e fritos.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Caldeirada de Pescada Amarela</span><span class="item-price">R$ 250,00</span></div><div class="item-desc">Camarão, ovo, legumes, arroz branco e pirão.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Peixe Frito Regional</span><span class="item-price">R$ 190,00</span></div><div class="item-desc">Arroz, farofa e vinagrete com feijão manteiguinha.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Pescada ao Solar</span><span class="item-price">R$ 178,00</span></div><div class="item-desc">Farinha especial, arroz cremoso e purê de batata.</div></div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">Saladas</div>
+      <div class="item"><div class="item-row"><span class="item-name">Salada Caesar</span><span class="item-price">R$ 80,00</span></div><div class="item-desc">Frango grelhado, croutons e parmesão ao molho caesar.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Salada com Feijão manteiguinha</span><span class="item-price">R$ 73,00</span></div><div class="item-desc">Vinagrete de feijão, tomate, cenoura, abobrinha e queijo.</div></div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">Kids</div>
+      <div class="item"><div class="item-row"><span class="item-name">Filé em Cubinhos</span><span class="item-price">R$ 116,00</span></div><div class="item-desc">Arroz branco, farofa de ovo e fritas.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Isca à milanesa</span><span class="item-price">R$ 99,00</span></div><div class="item-desc">Arroz branco, farofa e purê de batata.</div></div>
+    </div>
+    </div>
+
+    <div class="col">
+    <div class="section-block">
+      <div class="section-title">Risoto &amp; Massa</div>
+      <div class="item"><div class="item-row"><span class="item-name">Peixe Amazônico na crosta de alho</span><span class="item-price">R$ 205,00</span></div><div class="item-desc">Filhote, risoto de parmesão e azeitona preta.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Espaguete ao molho a bolonhesa</span><span class="item-price">R$ 78,00</span></div><div class="item-desc">Individual.</div></div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">Carnes</div>
+      <div class="item"><div class="item-row"><span class="item-name">Filé Alfredo</span><span class="item-price">R$ 185,00</span></div><div class="item-desc">Fettuccine ao creme de parmesão e aroma de bacon.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Filé Solar</span><span class="item-price">R$ 195,00</span></div><div class="item-desc">Molho de cebola, arroz piamontese, fritas e farofa de ovo.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Filé Grelhado Solar</span><span class="item-price">R$ 178,00</span></div><div class="item-desc">Grelhado, arroz, farofa e fritas.</div></div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">Caldos e Sopas</div>
+      <div class="section-note">Porção individual, acompanha torradas</div>
+      <div class="item"><div class="item-row"><span class="item-name">Sopa de Caranguejo</span><span class="item-price">R$ 75,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Canja</span><span class="item-price">R$ 60,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Caldo de Legumes com carne</span><span class="item-price">R$ 70,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Caldo de Tucupi</span><span class="item-price">R$ 55,00</span></div><div class="item-desc">Jambú e camarão.</div></div>
+    </div>
+    </div>
+
+    <div class="col">
+    <div class="section-block">
+      <div class="section-title">Burgers</div>
+      <div class="section-note">Acompanha salada de mix de folhas, tomate, cenoura ralada e cebola roxa</div>
+      <div class="item"><div class="item-row"><span class="item-name">Filé do Reino</span><span class="item-price">R$ 60,00</span></div><div class="item-desc">Pão baguete, filé, queijo do reino e fritas.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Burger Solar</span><span class="item-price">R$ 55,00</span></div><div class="item-desc">Pão, blend artesanal, queijo, calabresa, ovo e batata rústica.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Burger kids</span><span class="item-price">R$ 42,00</span></div><div class="item-desc">Pão, blend artesanal e queijo.</div></div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-title">Porções</div>
+      <div class="item"><div class="item-row"><span class="item-name">Feijão</span><span class="item-price">R$ 30,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Purê</span><span class="item-price">R$ 27,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Arroz branco</span><span class="item-price">R$ 22,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Arroz Piamontese</span><span class="item-price">R$ 32,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Farofa simples</span><span class="item-price">R$ 14,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Farofa de Banana</span><span class="item-price">R$ 19,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Farofa de ovo</span><span class="item-price">R$ 18,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Vinagrete</span><span class="item-price">R$ 15,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Torrada</span><span class="item-price">R$ 16,00</span></div></div>
+    </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ======================= PAGE 2 - VERSO ======================= -->
+<div class="page">
+  <div class="menu-header">
+    <div class="brand">
+      <img class="logo" src="hotel-solar-logo.png" alt="Hotel Solar">
+      <div class="brand-text">
+        <h1>Cardápio</h1>
+        <div class="subline">Sobremesas &bull; Bebidas &bull; Cerveja Cerpa</div>
+      </div>
+    </div>
+    <div class="meta">
+      <div class="page-tag">Hotel Solar &bull; Pág. 2/2</div>
+    </div>
+  </div>
+
+  <div class="columns cols-3">
+
+    <div class="col">
+    <div class="section-block">
+      <div class="section-title">Sobremesas</div>
+      <div class="item"><div class="item-row"><span class="item-name">Salada de Frutas Solar</span><span class="item-price">R$ 42,00</span></div><div class="item-desc">Frutas da estação, iogurte e geleia de morango.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Pudim de Leite</span><span class="item-price">R$ 32,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Suflê de Chocolate</span><span class="item-price">R$ 53,00</span></div><div class="item-desc">Creme de cupuaçú, cobertura de casca brulée.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Brulée de Cupuaçú</span><span class="item-price">R$ 42,00</span></div><div class="item-desc">Creme de cupuaçú, cobertura de casca brulée.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Duo Brownie</span><span class="item-price">R$ 54,00</span></div><div class="item-desc">Sorvete de creme e creme de chocolate.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Tartelete de Morango</span><span class="item-price">R$ 46,00</span></div><div class="item-desc">Creme de patissière, morango e chantilly.</div></div>
+    </div>
+    </div>
+
+    <div class="col">
+    <div class="section-block">
+      <div class="section-title">Bebidas &mdash; Doses</div>
+      <div class="item"><div class="item-row"><span class="item-name">Whisky Old Parr</span><span class="item-price">R$ 30,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Whisky Johnnie Walker Red</span><span class="item-price">R$ 25,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Vodka (Importada)</span><span class="item-price">R$ 30,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Tequila</span><span class="item-price">R$ 33,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Cointreau</span><span class="item-price">R$ 32,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Rum</span><span class="item-price">R$ 27,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Gin</span><span class="item-price">R$ 33,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Cachaça de Jambú</span><span class="item-price">R$ 25,00</span></div></div>
+    </div>
+    </div>
+
+    <div class="col">
+    <div class="section-block">
+      <div class="section-title">Bebidas &mdash; Não Alcoólicos</div>
+      <div class="item"><div class="item-row"><span class="item-name">Água sem gás</span><span class="item-price">R$ 7,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Água com gás</span><span class="item-price">R$ 10,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Refrigerante em lata</span><span class="item-price">R$ 10,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Sucos (Consultar garçom)</span><span class="item-price">R$ 19,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Suco Verde do Solar</span><span class="item-price">R$ 22,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Shot de limão</span><span class="item-price">R$ 6,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Água tônica Schweppes</span><span class="item-price">R$ 12,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Água de coco (Consultar garçom)</span><span class="item-price">R$ 12,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Energético Red Bull</span><span class="item-price">R$ 22,00</span></div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Milkshake</span><span class="item-price">R$ 40,00</span></div><div class="item-desc">Chocolate, morango e açaí.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Vitamina</span><span class="item-price">R$ 30,00</span></div><div class="item-desc">Mamão, banana e leite.</div></div>
+      <div class="item"><div class="item-row"><span class="item-name">Café Expresso</span><span class="item-price">R$ 10,00</span></div></div>
+    </div>
+    </div>
+
+    <div class="cerpa-block">
+      <div class="cerpa-top">
+        <div class="cerpa-brand">
+          <span class="logo-chip"><img src="cerpa-logo-centered.png" alt="Cerpa"></span>
+          <div class="cerpa-brand-text">
+            <h2>Espaço Cerpa</h2>
+            <p>Cervejas premium selecionadas pela nossa patrocinadora oficial</p>
+          </div>
+        </div>
+        <span class="cerpa-tag">Patrocinador Oficial</span>
+      </div>
+      <div class="cerpa-flight">
+
+        <div class="cerpa-card">
+          <img class="cerpa-photo" src="cerpa-export.png" alt="Cerpa Export">
+          <div class="cerpa-card-name">Cerpa Export</div>
+          <div class="cerpa-card-abv">5.3% ABV &bull; 3&deg;C&ndash;5&deg;C</div>
+          <div class="cerpa-card-note">Corpo médio e refinado &mdash; harmoniza com peixes e frutos do mar.</div>
+          <div class="cerpa-card-price">R$ 17,00</div>
+        </div>
+
+        <div class="cerpa-card">
+          <img class="cerpa-photo" src="tijuca-pilsen.png" alt="Tijuca Pilsen">
+          <div class="cerpa-card-name">Tijuca Pilsen</div>
+          <div class="cerpa-card-abv">4.5% ABV &bull; 2&deg;C&ndash;4&deg;C</div>
+          <div class="cerpa-card-note">Leve e refrescante &mdash; ideal para dias quentes.</div>
+          <div class="cerpa-card-price">R$ 15,00</div>
+        </div>
+
+        <div class="cerpa-card">
+          <img class="cerpa-photo" src="tijuca-puromalte.png" alt="Tijuca Puro Malte">
+          <div class="cerpa-card-name">Tijuca Puro Malte</div>
+          <div class="cerpa-card-abv">4.7% ABV &bull; 3&deg;C&ndash;5&deg;C</div>
+          <div class="cerpa-card-note">Equilíbrio e corpo &mdash; vai bem com carnes na brasa.</div>
+          <div class="cerpa-card-price">R$ 15,00</div>
+        </div>
+
+        <div class="cerpa-card">
+          <img class="cerpa-photo" src="tijuca-silver.png" alt="Tijuca Silver">
+          <div class="cerpa-card-name">Tijuca Silver</div>
+          <div class="cerpa-card-abv">4.5% ABV &bull; 2&deg;C&ndash;4&deg;C</div>
+          <div class="cerpa-card-note">Premium sem glúten, leve e refrescante.</div>
+          <div class="cerpa-card-price">R$ 15,00</div>
+        </div>
+
+        <div class="cerpa-card">
+          <img class="cerpa-photo" src="cerpa-kroland.png" alt="Cerpa Kroland">
+          <div class="cerpa-card-name">Cerpa Kroland</div>
+          <div class="cerpa-card-abv">4.6% ABV &bull; 2&deg;C&ndash;4&deg;C</div>
+          <div class="cerpa-card-note">Puro malte de inspiração alemã, leve e equilibrada.</div>
+          <div class="cerpa-card-price">R$ 15,00</div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="foot-note">
+      Proibido Fumar &bull; Proibido Cooler &bull; Proibido Pet's &bull; Proibido Caixa de Som &nbsp;|&nbsp; Av. Atlântica &bull; Salinópolis - PA &nbsp;|&nbsp; Tel: (91) 98100-0800
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
