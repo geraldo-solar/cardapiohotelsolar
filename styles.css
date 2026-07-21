@@ -636,6 +636,10 @@ footer {
     background: linear-gradient(135deg, #d4af37, #aa7c11);
 }
 
+.cerpa-badge-chopp {
+    background: linear-gradient(135deg, #e0a028, #b3711a);
+}
+
 .cerpa-badge-puro {
     background: linear-gradient(135deg, #2e7d32, #1b5e20);
 }
