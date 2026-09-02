@@ -25,7 +25,9 @@
                  '#pacote-0267abd7-ba19-4492-8894-aea827edea33',
 
         // Quantos dias a faixa fica escondida depois que o cliente fecha.
-        diasOcultoAposFechar: 7,
+        // Zero = não lembra: a faixa reaparece toda vez que o cardápio é aberto.
+        // O X segue funcionando para tirá-la da frente durante a leitura.
+        diasOcultoAposFechar: 0,
 
         // Segundos até a faixa subir, para não competir com o carregamento do cardápio.
         atrasoSegundos: 1.5
@@ -108,6 +110,7 @@
     }
 
     function foiFechadaRecentemente() {
+        if (CONFIG.diasOcultoAposFechar <= 0) return false;
         try {
             var ate = localStorage.getItem(CHAVE_FECHOU);
             return !!ate && Date.now() < Number(ate);
@@ -118,6 +121,12 @@
 
     function marcarComoFechada() {
         try {
+            if (CONFIG.diasOcultoAposFechar <= 0) {
+                // Limpa a marca de quem já fechou antes desta mudança, senão
+                // esse cliente seguiria sem ver a faixa até o prazo antigo vencer.
+                localStorage.removeItem(CHAVE_FECHOU);
+                return;
+            }
             var prazo = Date.now() + CONFIG.diasOcultoAposFechar * 24 * 60 * 60 * 1000;
             localStorage.setItem(CHAVE_FECHOU, String(prazo));
         } catch (e) { /* sem localStorage: a faixa volta na próxima visita */ }
@@ -341,6 +350,10 @@
         }, CONFIG.atrasoSegundos * 1000);
 
         window.addEventListener('resize', reservarEspaco);
+    }
+
+    if (CONFIG.diasOcultoAposFechar <= 0) {
+        try { localStorage.removeItem(CHAVE_FECHOU); } catch (e) { /* ignora */ }
     }
 
     if (!modoPreview()) {
