@@ -4,8 +4,8 @@ Revisão item a item dos dois cardápios digitais (Hotel Solar e Reserva Solar),
 feita produto por produto. Serve de ponto de partida para a próxima revisão:
 a coluna "Preço novo" é o que está em vigor hoje.
 
-**Resumo:** 119 produtos revisados · 36 preços alterados (35 para cima, 1 para
-baixo) · 83 mantidos · 3 descrições corrigidas · 2 nomes desambiguados.
+**Resumo:** 119 produtos revisados · 37 preços alterados (36 para cima, 1 para
+baixo) · 82 mantidos · 3 descrições corrigidas · 3 nomes corrigidos.
 
 Aplicado em: cardápio digital, arquivos de impressão (A3 dos dois, A5 de
 drinks) e os três PDFs, além das traduções nos 5 idiomas.
@@ -25,6 +25,25 @@ drinks) e os três PDFs, além das traduções nos 5 idiomas.
 | Coquetel de Frutas (R$ 49,00) | Coquetel de Frutas (com álcool) | Os dois tinham nome idêntico e preços diferentes, o que parecia erro na mesa. O de R$ 49,00 leva vodka. |
 | Coquetel de Frutas (R$ 44,00) | Coquetel de Frutas (sem álcool) | |
 | Pão do Solar | Pão do Reserva | O digital e o A3 diziam "do Solar"; as traduções já diziam "do Reserva", que é o nome correto. |
+| Felicidade do Solar | Felicidade do Reserva | Mesmo caso do pão: traduções e ERP já diziam "do Reserva". |
+
+## ERP
+
+Os mesmos preços foram gravados na tabela `products` do ERP (campo
+`default_price`, que alimenta o PDV, o folio e a emissão de NFC-e). Foram 41
+registros: os 36 produtos, mais 4 linhas duplicadas porque pratos presentes
+nos dois cardápios têm cadastro separado por PDV (sufixo " Reserva" no nome),
+mais o "Camarão ao Alho e Óleo Reserva", que foi de R$ 95,00 para R$ 129,00
+acompanhando o do Hotel Solar embora não conste do cardápio do Reserva.
+
+Duas correções vieram do ERP para o cardápio: o refrigerante ks (o ERP cobrava
+R$ 10,00, o cardápio dizia R$ 9,00) e o nome da Felicidade do Reserva.
+
+No ERP foram renomeados 6 produtos para bater com os cardápios: os quatro
+coquetéis (agora "(com álcool)" e "(sem álcool)") e os dois energéticos, que
+ainda citavam o Monster, retirado dos cardápios antes desta revisão.
+
+Conferência final: 150 comparações entre cardápios e ERP, nenhuma divergência.
 
 ## Todos os 119 produtos
 
@@ -142,9 +161,9 @@ drinks) e os três PDFs, além das traduções nos 5 idiomas.
 | 108 | Filé Grelhado | Reserva | Carnes | R$ 175,00 | R$ 195,00 |
 | 109 | Mix de Frutas | Reserva | Sobremesas | R$ 52,00 | — |
 | 110 | Mini churros Festival comidinha de praia (Premiado) | Reserva | Sobremesas | R$ 55,00 | — |
-| 111 | Felicidade do Solar | Reserva | Sobremesas | R$ 60,00 | — |
+| 111 | Felicidade do Reserva | Reserva | Sobremesas | R$ 60,00 | — |
 | 112 | Cocada cremosa acompanhada de sorvete de Bacuri | Reserva | Sobremesas | R$ 55,00 | R$ 62,00 |
-| 113 | Refrigerante ks (coca e coca zero) | Reserva | Bebidas | R$ 9,00 | — |
+| 113 | Refrigerante ks (coca e coca zero) | Reserva | Bebidas | R$ 9,00 | R$ 10,00 |
 | 114 | Chopp Cerpa Export | Ambos | Espaço Cerpa | R$ 17,00 | — |
 | 115 | Cerpa Export | Ambos | Espaço Cerpa | R$ 17,00 | — |
 | 116 | Tijuca Pilsen | Ambos | Espaço Cerpa | R$ 15,00 | — |
